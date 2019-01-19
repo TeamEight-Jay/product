@@ -23,8 +23,8 @@ public class ProductController {
         return productDTO;
     }
 
-    @GetMapping("/product/get")
-    public ProductDTO get(@RequestParam String id){
+    @RequestMapping(value = "/product/get/{id}",method = RequestMethod.GET)
+    public ProductDTO get(@PathVariable String id){
         ProductEntity productEntity= productServices.get(id);
         ProductDTO productDTO=new ProductDTO();
         BeanUtils.copyProperties(productEntity,productDTO);
