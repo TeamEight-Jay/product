@@ -1,11 +1,18 @@
 package com.teamfive.product.DTO;
 
+import java.util.List;
+
 public class ProductDTO {
     private String productId;
     private String productName;
     private String description;
     private String keyFeatures;
-    private String imageSrc;
+
+    public void setImageSrc(List<String> imageSrc) {
+        this.imageSrc = imageSrc;
+    }
+
+    private List<String> imageSrc;
 
     public String getProductId() {
         return productId;
@@ -39,11 +46,4 @@ public class ProductDTO {
         this.keyFeatures = keyFeatures;
     }
 
-    public String getImageSrc() {
-        return imageSrc;
-    }
-
-    public void setImageSrc(String imageSrc) {
-        this.imageSrc = imageSrc;
-    }
 }
