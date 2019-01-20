@@ -6,6 +6,15 @@ public class ProductDTO {
     private String description;
     private String keyFeatures;
     private String imageSrc;
+    private String cataegories;
+
+    public String getCataegories() {
+        return cataegories;
+    }
+
+    public void setCataegories(String cataegories) {
+        this.cataegories = cataegories;
+    }
 
     public String getProductId() {
         return productId;

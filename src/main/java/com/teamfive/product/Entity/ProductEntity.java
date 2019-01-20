@@ -19,6 +19,16 @@ public class ProductEntity {
     private String productName;
     private String description;
     private String keyFeatures;
+
+    public String getCataegories() {
+        return cataegories;
+    }
+
+    public void setCataegories(String cataegories) {
+        this.cataegories = cataegories;
+    }
+
+    private String cataegories;
     private String imageSrc;
 
     public String getProductId() {
