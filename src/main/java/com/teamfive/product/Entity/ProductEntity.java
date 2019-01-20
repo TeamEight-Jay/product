@@ -4,7 +4,6 @@ import org.springframework.data.annotation.Id;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
 @Table(name= ProductEntity.TABLE_NAME)
@@ -21,15 +20,16 @@ public class ProductEntity {
     private String description;
     private String keyFeatures;
 
-    public List<String> getImageSrc() {
-        return imageSrc;
+    public String getCataegories() {
+        return cataegories;
     }
 
-    public void setImageSrc(List<String> imageSrc) {
-        this.imageSrc = imageSrc;
+    public void setCataegories(String cataegories) {
+        this.cataegories = cataegories;
     }
 
-    private List<String> imageSrc;
+    private String cataegories;
+    private String imageSrc;
 
     public String getProductId() {
         return productId;
@@ -63,4 +63,11 @@ public class ProductEntity {
         this.keyFeatures = keyFeatures;
     }
 
+    public String getImageSrc() {
+        return imageSrc;
+    }
+
+    public void setImageSrc(String imageSrc) {
+        this.imageSrc = imageSrc;
+    }
 }
