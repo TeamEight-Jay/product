@@ -8,6 +8,9 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @RestController
 public class ProductController {
 
@@ -37,6 +40,19 @@ public class ProductController {
         ProductDTO productDTO=new ProductDTO();
         BeanUtils.copyProperties(productEntity,productDTO);
         return productDTO;
+    }
+
+    @GetMapping("product/category/{category}")
+    public List<ProductDTO> getCategoryList(@PathVariable String category)
+    {
+        Iterable<ProductEntity> productEntityList=productServices.getByCategory(category);
+        List<ProductDTO> productDTOList=new ArrayList<ProductDTO>();
+        for (ProductEntity p:productEntityList) {
+            ProductDTO productDTO=new ProductDTO();
+            BeanUtils.copyProperties(p,productDTO);
+            productDTOList.add(productDTO);
+        }
+        return productDTOList;
     }
 
 

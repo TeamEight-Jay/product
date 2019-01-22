@@ -1,9 +1,10 @@
 package com.teamfive.product.Entity;
 
-import org.springframework.data.annotation.Id;
+
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -12,6 +13,7 @@ public class ProductEntity {
 
     public final static String TABLE_NAME="PRODUCT";
     private static final String ID_COLUMN="ID";
+
     @Id
     @GeneratedValue(generator = "uuid")
     @GenericGenerator(name="uuid",strategy = "uuid2")
@@ -21,16 +23,8 @@ public class ProductEntity {
     private String description;
     private String keyFeatures;
     private String category;
-    private List<String> imageSrc;
+    private ArrayList<String> imageSrc;
 
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
     public String getProductId() {
         return productId;
     }
@@ -63,11 +57,19 @@ public class ProductEntity {
         this.keyFeatures = keyFeatures;
     }
 
-    public List<String> getImageSrc() {
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public ArrayList<String> getImageSrc() {
         return imageSrc;
     }
 
-    public void setImageSrc(List<String> imageSrc) {
+    public void setImageSrc(ArrayList<String> imageSrc) {
         this.imageSrc = imageSrc;
     }
 }
