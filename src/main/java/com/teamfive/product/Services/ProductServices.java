@@ -22,7 +22,8 @@ public class ProductServices implements ProductInterface {
     public ProductEntity add(ProductDTO productDTO) {
         ProductEntity productEntity=new ProductEntity();
         BeanUtils.copyProperties(productDTO,productEntity);
-        return productRepositories.save(productEntity);
+        ProductEntity insertedProduct = productRepositories.save(productEntity);
+        return insertedProduct;
     }
 
     @Override

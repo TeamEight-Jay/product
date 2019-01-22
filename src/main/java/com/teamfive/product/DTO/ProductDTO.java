@@ -8,14 +8,14 @@ public class ProductDTO {
     private String description;
     private String keyFeatures;
     private List<String> imageSrc;
-    private String cataegories;
+    private String category;
 
-    public String getCataegories() {
-        return cataegories;
+    public String getCategory() {
+        return category;
     }
 
-    public void setCataegories(String cataegories) {
-        this.cataegories = cataegories;
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public String getProductId() {

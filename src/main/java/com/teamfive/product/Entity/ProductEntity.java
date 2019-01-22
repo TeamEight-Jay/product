@@ -10,7 +10,7 @@ import java.util.List;
 @Table(name= ProductEntity.TABLE_NAME)
 public class ProductEntity {
 
-    public final static String TABLE_NAME="EMPLOYEE";
+    public final static String TABLE_NAME="PRODUCT";
     private static final String ID_COLUMN="ID";
     @Id
     @GeneratedValue(generator = "uuid")
@@ -20,16 +20,16 @@ public class ProductEntity {
     private String productName;
     private String description;
     private String keyFeatures;
-    private String cataegories;
+    private String category;
     private List<String> imageSrc;
 
 
-    public String getCataegories() {
-        return cataegories;
+    public String getCategory() {
+        return category;
     }
 
-    public void setCataegories(String cataegories) {
-        this.cataegories = cataegories;
+    public void setCategory(String category) {
+        this.category = category;
     }
     public String getProductId() {
         return productId;
