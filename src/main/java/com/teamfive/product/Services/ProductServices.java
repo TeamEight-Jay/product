@@ -6,6 +6,7 @@ import com.teamfive.product.Entity.ProductEntity;
 import com.teamfive.product.Repositories.ProductRepositories;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
@@ -16,6 +17,7 @@ import java.util.List;
 @Transactional
 public class ProductServices implements ProductInterface {
 
+
     @Autowired
     ProductRepositories productRepositories;
 
@@ -24,6 +26,7 @@ public class ProductServices implements ProductInterface {
     public ProductEntity add(ProductDTO productDTO) {
         ProductEntity productEntity=new ProductEntity();
         BeanUtils.copyProperties(productDTO,productEntity);
+        productEntity.setProductRating(2.5f);
         ProductEntity insertedProduct = productRepositories.save(productEntity);
         return insertedProduct;
     }

@@ -2,6 +2,7 @@ package com.teamfive.product.DTO;
 
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ProductDTO {
     private String productId;
@@ -10,6 +11,17 @@ public class ProductDTO {
     private String keyFeatures;
     private ArrayList<String> imageSrc;
     private String category;
+    private float productRating;
+
+    public float getProductRating() {
+        return productRating;
+    }
+
+    public void setProductRating(float productRating) {
+        this.productRating = productRating;
+    }
+
+
 
     public String getProductId() {
         return productId;
@@ -60,5 +72,15 @@ public class ProductDTO {
     }
 
 
-
+    @Override
+    public String toString() {
+        return "ProductDTO{" +
+                "productId='" + productId + '\'' +
+                ", productName='" + productName + '\'' +
+                ", description='" + description + '\'' +
+                ", keyFeatures='" + keyFeatures + '\'' +
+                ", imageSrc=" + imageSrc +
+                ", category='" + category + '\'' +
+                '}';
+    }
 }
