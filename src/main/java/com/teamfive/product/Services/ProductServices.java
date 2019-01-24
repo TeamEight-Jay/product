@@ -27,6 +27,7 @@ public class ProductServices implements ProductInterface {
         ProductEntity productEntity=new ProductEntity();
         BeanUtils.copyProperties(productDTO,productEntity);
         productEntity.setProductRating(2.5f);
+        //productEntity.setRatingCount(0);
         ProductEntity insertedProduct = productRepositories.save(productEntity);
         return insertedProduct;
     }
@@ -50,5 +51,10 @@ public class ProductServices implements ProductInterface {
     @Override
     public ArrayList<ProductEntity> getByCategory(String category) {
         return  productRepositories.findByCategory(category);
+    }
+
+    private void updateRating(float rating,int quantity)
+    {
+
     }
 }

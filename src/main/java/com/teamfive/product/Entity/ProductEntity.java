@@ -25,6 +25,7 @@ public class ProductEntity {
     private String category;
     private ArrayList<String> imageSrc;
     private float productRating;
+    //private int ratingCount;
 
     public float getProductRating() {
         return productRating;
@@ -33,7 +34,6 @@ public class ProductEntity {
     public void setProductRating(float productRating) {
         this.productRating = productRating;
     }
-
 
 
     public String getProductId() {
@@ -84,6 +84,16 @@ public class ProductEntity {
         this.imageSrc = imageSrc;
     }
 
+    /*
+    public int getRatingCount() {
+        return ratingCount;
+    }
+
+    public void setRatingCount(int ratingCount) {
+        this.ratingCount = ratingCount;
+    }
+    */
+
     @Override
     public String toString() {
         return "ProductEntity{" +
@@ -93,6 +103,8 @@ public class ProductEntity {
                 ", keyFeatures='" + keyFeatures + '\'' +
                 ", category='" + category + '\'' +
                 ", imageSrc=" + imageSrc +
+                ", productRating=" + productRating +
+               // ", ratingCount=" + ratingCount +
                 '}';
     }
 }

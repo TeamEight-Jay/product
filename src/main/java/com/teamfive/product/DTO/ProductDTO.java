@@ -11,17 +11,6 @@ public class ProductDTO {
     private String keyFeatures;
     private ArrayList<String> imageSrc;
     private String category;
-    private float productRating;
-
-    public float getProductRating() {
-        return productRating;
-    }
-
-    public void setProductRating(float productRating) {
-        this.productRating = productRating;
-    }
-
-
 
     public String getProductId() {
         return productId;
