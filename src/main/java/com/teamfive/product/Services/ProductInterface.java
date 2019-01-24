@@ -14,5 +14,6 @@ public interface ProductInterface {
     ProductEntity get(String id);
     ProductEntity getMiniProduct(String id);
     ArrayList<ProductEntity> getByCategory(String category);
+    void update(ProductEntity productEntity);
 
 }

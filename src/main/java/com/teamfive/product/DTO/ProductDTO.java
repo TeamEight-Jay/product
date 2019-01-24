@@ -11,6 +11,7 @@ public class ProductDTO {
     private String keyFeatures;
     private ArrayList<String> imageSrc;
     private String category;
+    private double productRating;
 
     public String getProductId() {
         return productId;
@@ -60,6 +61,14 @@ public class ProductDTO {
         this.category = category;
     }
 
+
+    public double getProductRating() {
+        return productRating;
+    }
+
+    public void setProductRating(double productRating) {
+        this.productRating = productRating;
+    }
 
     @Override
     public String toString() {

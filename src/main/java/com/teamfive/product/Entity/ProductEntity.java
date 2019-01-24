@@ -24,14 +24,14 @@ public class ProductEntity {
     private String keyFeatures;
     private String category;
     private ArrayList<String> imageSrc;
-    private float productRating;
+    private double productRating;
     //private int ratingCount;
 
-    public float getProductRating() {
+    public double getProductRating() {
         return productRating;
     }
 
-    public void setProductRating(float productRating) {
+    public void setProductRating(double productRating) {
         this.productRating = productRating;
     }
 
